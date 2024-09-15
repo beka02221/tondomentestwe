@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            padding: 30px;
+            background-color: #556B2F; /* Тёмно-авокадовый цвет */
+            transition: background-color 0.3s;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .post {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+        }
+
+        .post img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .post .username {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        #toggle-theme {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: yellow;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .light-theme {
+            background-color: #98FB98; /* Светло-авокадовый цвет */
+            color: black;
+        }
+
+        #photo-input, #submit-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #32CD32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #photo-input {
+            width: 200px;
+        }
+
+        #submit-btn {
+            width: 100px;
+        }
+
+    </style>
+    <script type="module" src="./homepage.js"></script>
+</head>
+<body>
+    <h1>Welcome to the Photo Feed</h1>
+    
+    <!-- Input to upload photo -->
+    <input type="file" id="photo-input" accept="image/*">
+    
+    <!-- Button to submit the post -->
+    <button id="submit-btn">Post</button>
+    
+    <!-- Container for displaying posts -->
+    <div id="postsContainer"></div>
+    
+    <!-- Theme toggle button -->
+    <button id="toggle-theme">🌞</button>
+</body>
+</html>
